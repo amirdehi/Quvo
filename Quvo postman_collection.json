@@ -1,0 +1,333 @@
+{
+	"info": {
+		"_postman_id": "43cd93d2-1b88-4345-b974-d0776366830a",
+		"name": "Quvo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Vote",
+			"item": [
+				{
+					"name": "create vote",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"how are you\",\r\n    \"subtitle\":\"just for fun\",\r\n    \"creatorId\":\"3\",\r\n    \"expirePlan\":\"4\",\r\n    \"optionsList\":[\"very good\",\"normal\",\"bad\",\"very bad\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/createVote",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"createVote"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show vote",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/showVote/34",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"showVote",
+								"34"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show all votes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/showAllVotes",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"showAllVotes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update vote",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"uniqueId\":\"34\",\r\n    \"title\":\"how do you feel about your life?\",\r\n    \"subtitle\":\"just for knowledge\",\r\n    \"creatorId\":\"3\",\r\n    \"expirePlan\":\"1\",\r\n    \"optionsList\":[\"very good\",\"normal\",\"bad\",\"very bad\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/editVote",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"editVote"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete vote",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/deleteVote/47",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"deleteVote",
+								"47"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "submit vote",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"uniqueId\":\"34\",\r\n    \"selectedOptionId\":\"36\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/submitVote",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"submitVote"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "vote result",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/voteResults/34",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"voteResults",
+								"34"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "create user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"amirdhei\",\r\n    \"password\":\"123456\",\r\n    \"role\":\"1\",\r\n    \"fullName\":\"ali ramezanpour\",\r\n    \"phone\":\"09904977317\",\r\n    \"email\":\"aramirdehi98@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/createUser",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"createUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get user by id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/showUser/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"showUser",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get user by username",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/showUserByUserName/amirdhei",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"showUserByUserName",
+								"amirdhei"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update user",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"amirdehi\",\r\n    \"password\":\"12345678\",\r\n    \"role\":\"1\",\r\n    \"fullName\":\"ali ramezanpour\",\r\n    \"phone\":\"09204977317\",\r\n    \"email\":\"amirdehi98@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/updateUser",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"updateUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete user by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/deleteUser/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"deleteUser",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete user by username",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/deleteUserByUserName/sheida",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"deleteUserByUserName",
+								"sheida"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
